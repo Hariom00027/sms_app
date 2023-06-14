@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activities.MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        app:boxBackgroundColor="@color/grey2"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/hint_phone"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        app:boxBackgroundColor="@color/grey2"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText"
+            android:hint="@string/hint_msg" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSendSMS"
+        app:cornerRadius="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        app:strokeColor="@color/colorPrimary"
+        android:layout_below="@+id/editTextLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="@string/action_send" />
+
+    <ImageButton
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextLayout2"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/editTextLayout"
+        android:background="?android:attr/colorBackground"
+        app:srcCompat="@drawable/ic_contacts_black_24dp" />
+
+</RelativeLayout>
